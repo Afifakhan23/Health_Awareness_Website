@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Healthy Habits</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Segoe UI, Arial;
+      background: #e7c6ff;
+    }
+
+    header {
+      background: linear-gradient(90deg, #3a0ca3, #7209b7);
+      color: white;
+      padding: 5px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #4cc9f0;
+      border-bottom: 1px solid black;
+    }
+
+    .hero {
+      height: 80vh;
+      background: linear-gradient(rgba(204, 152, 239, 0.75), rgba(64, 9, 190, 0.75)),
+        url("image.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+
+    .btn {
+      background: #A5F3FE;
+      padding: 12px 25px;
+      color: black;
+      border-radius: 30px;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #4cc9f0;
+      color: #3a0ca3;
+    }
+
+    footer {
+      background: #3a0ca3;
+      color: white;
+      text-align: center;
+      padding: 12px;
+    }
+
+    /* =========================
+   MEDIA QUERIES
+========================= */
+
+    /* ---------- MOBILE (max-width: 600px) ---------- */
+    @media (max-width: 600px) {
+
+      header {
+        flex-direction: column;
+        padding: 10px 20px;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+
+      .hero {
+        height: 70vh;
+        padding: 20px;
+      }
+
+      .hero h2 {
+        font-size: 26px;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+    }
+
+    /* ---------- TABLET (min-width: 601px and max-width: 992px) ---------- */
+    @media (min-width: 601px) and (max-width: 992px) {
+
+      header {
+        padding: 10px 30px;
+      }
+
+      .hero {
+        height: 75vh;
+      }
+
+      .hero h2 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      nav a {
+        margin-left: 15px;
+      }
+    }
+
+    /* ---------- LAPTOP & DESKTOP (min-width: 993px) ---------- */
+    @media (min-width: 993px) {
+
+      header {
+        padding: 5px 40px;
+      }
+
+      .hero h2 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Healthy Habits</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="habits.html">Habits</a>
+      <a href="tips.html">Tips</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h2>Healthy Habits Awareness</h2>
+      <p>Small daily habits make a big difference</p>
+      <a class="btn" href="habits.html">Explore Habits</a>
+    </div>
+  </section>
+
+  <footer>© 2025 Healthy Habits</footer>
+</body>
+
+</html>

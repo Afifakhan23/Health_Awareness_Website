@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Healthy Habit Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #74ebd5, #9face6);
+            color: #333;
+        }
+
+        header,
+        footer {
+            background: linear-gradient(90deg, #3a0ca3, #7209b7);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            margin: 50px auto;
+        }
+
+        .habits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .habit-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .habit-card:hover {
+            transform: scale(1.05);
+        }
+
+        .habit-card img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        .habit-card h3 {
+            color: #4CAF50;
+        }
+
+        .bmi-box {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .bmi-box input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .bmi-box button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .bmi-box button:hover {
+            background: #43a047;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* =========================
+   MEDIA QUERIES – HABITS PAGE
+========================= */
+
+        /* ---------- MOBILE (max-width: 600px) ---------- */
+        @media (max-width: 600px) {
+
+            header,
+            footer {
+                padding: 12px;
+            }
+
+            nav a {
+                display: block;
+                margin: 8px 0;
+                font-size: 14px;
+            }
+
+            .container {
+                width: 95%;
+                margin: 30px auto;
+            }
+
+            .habits {
+                grid-template-columns: 1fr;
+            }
+
+            .habit-card {
+                padding: 15px;
+            }
+
+            .habit-card img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .bmi-box {
+                width: 90%;
+                padding: 20px;
+                margin-top: 30px;
+            }
+
+            .bmi-box input {
+                width: 95%;
+            }
+
+            #result {
+                font-size: 16px;
+            }
+        }
+
+        /* ---------- TABLET (601px – 992px) ---------- */
+        @media (min-width: 601px) and (max-width: 992px) {
+
+            .container {
+                width: 90%;
+                margin: 40px auto;
+            }
+
+            .habits {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .habit-card img {
+                width: 90px;
+                height: 90px;
+            }
+
+            .bmi-box {
+                width: 80%;
+                margin-top: 40px;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+        }
+
+        /* ---------- LAPTOP & DESKTOP (993px and above) ---------- */
+        @media (min-width: 993px) {
+
+            .habits {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            .bmi-box {
+                width: 400px;
+            }
+
+            #result {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h3>Healthy Lifestyle Habit Page</h3>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="habits.html">Habits</a>
+            <a href="tips.html">Tips</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <div class="habits">
+            <div class="habit-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3050/3050525.png">
+                <h3>Drink Water</h3>
+                <p>Daily 8 glasses of water keeps you healthy.</p>
+            </div>
+
+            <div class="habit-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/2964/2964514.png">
+                <h3>Exercise</h3>
+                <p>Exercise daily for strong body & mind.</p>
+            </div>
+
+            <div class="habit-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/135/135763.png">
+                <h3>Healthy Diet</h3>
+                <p>Eat fruits & vegetables every day.</p>
+            </div>
+
+            <div class="habit-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/2964/2964509.png">
+                <h3>Good Sleep</h3>
+                <p>Sleep 7–8 hours for better health.</p>
+            </div>
+        </div>
+
+        <!-- BMI Calculator -->
+        <div class="bmi-box">
+            <h2>BMI Calculator</h2>
+
+            <input type="number" id="weight" placeholder="Weight (kg)">
+            <input type="number" id="height" placeholder="Height (cm)">
+
+            <button onclick="calculateBMI()">Calculate BMI</button>
+
+            <div id="result"></div>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2025 Healthy Habits Project
+    </footer>
+
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

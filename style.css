@@ -1,0 +1,257 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #e7c6ff;
+  color: #2d2d2d;
+  line-height: 1.6;
+}
+
+/* =========================
+   HEADER & NAVBAR
+========================= */
+header {
+  background: linear-gradient(90deg, #3a0ca3, #7209b7);
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #4cc9f0;
+}
+
+/* =========================
+   HERO SECTION (HOME)
+========================= */
+.hero {
+  height: 80vh;
+  background-image: linear-gradient(
+      rgba(114, 9, 183, 0.75),
+      rgba(58, 12, 163, 0.75)
+    ),
+    url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn,
+button {
+  background-color: #4361ee;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover,
+button:hover {
+  background-color: #4cc9f0;
+  color: #3a0ca3;
+}
+
+/* =========================
+   CONTENT SECTIONS
+========================= */
+.content {
+  padding: 50px 80px;
+}
+
+.content h2 {
+  color: #3a0ca3;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.content p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* =========================
+   HABITS CARDS
+========================= */
+.habit-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  margin: 25px 0;
+  transition: transform 0.3s;
+}
+
+.habit-card:hover {
+  transform: translateY(-6px);
+}
+
+.habit-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.habit-card h3 {
+  color: #7209b7;
+  padding: 15px;
+  font-size: 22px;
+}
+
+.habit-card p {
+  padding: 0 15px 20px;
+  font-size: 15px;
+}
+
+/* =========================
+   BMI CALCULATOR
+========================= */
+.bmi-box {
+  background: linear-gradient(135deg, #4cc9f0, #e7c6ff);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 380px;
+  margin-top: 40px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.bmi-box h2,
+.bmi-box h3 {
+  color: #3a0ca3;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.bmi-box label {
+  font-weight: 500;
+}
+
+.bmi-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 15px;
+  border-radius: 8px;
+  border: 1px solid #4361ee;
+}
+
+#result {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+  color: #7209b7;
+}
+
+/* =========================
+   TIPS PAGE
+========================= */
+ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+ul li {
+  background: white;
+  padding: 14px 20px;
+  margin-bottom: 12px;
+  border-left: 6px solid #4361ee;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+form {
+  max-width: 450px;
+  margin-top: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #7209b7;
+}
+
+form textarea {
+  resize: none;
+  height: 120px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: linear-gradient(90deg, #3a0ca3, #7209b7);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .content {
+    padding: 30px 20px;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+}
